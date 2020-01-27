@@ -33,8 +33,11 @@ def convert(size,box):
 
 def convert_annotation(path,path2):
   with open(path,'r') as f:
-    data = json.load(f)
+    data = json.load(f)  
+  nfiles = len(data['images'])
+  i = 0
   for item in data['images']:
+    i+=1
     image_id = item['id']
     file_name = item['file_name']
     width = item['width']
@@ -50,6 +53,7 @@ def convert_annotation(path,path2):
       bb = convert((width,height),box)
       outfile.write(str(class_id)+" "+" ".join([str(a) for a in bb]) + '\n')
     outfile.close()
+    print("{} / {}".format(i,nfiles), end='\r')
 			
 if __name__ == '__main__':
     path = '/home/ec2-user/dataset/coco/annotations/instances_train2017.json'
