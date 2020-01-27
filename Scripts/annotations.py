@@ -52,9 +52,9 @@ def convert_annotation(path,path2):
     outfile.close()
 			
 if __name__ == '__main__':
-    path = '/home/ec2-user/dataset/coco/annotations_trainval2017/annotations/instances_train2017.json'
-    path2 = '/home/ec2-user/dataset/coco/train2017/labellabel/'
+    path = '/home/ec2-user/dataset/coco/annotations/instances_train2017.json'
+    path2 = '/home/ec2-user/dataset/coco/images/train2017/labellabel/'
     convert_annotation(path,path2)
-    path = '/home/ec2-user/dataset/coco/annotations_trainval2017/annotations/instances_val2017.json'
-    path2 = '/home/ec2-user/dataset/coco/val2017/labellabel/'
+    path = '/home/ec2-user/dataset/coco/annotations/instances_val2017.json'
+    path2 = '/home/ec2-user/dataset/coco/images/val2017/labellabel/'
     convert_annotation(path,path2)

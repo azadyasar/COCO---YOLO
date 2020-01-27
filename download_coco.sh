@@ -27,3 +27,12 @@ unzip image_info_test2017.zip
 rm annotations_trainval2017.zip
 rm stuff_annotations_trainval2017.zip
 rm image_info_test2017.zip
+
+
+cd images/train2017
+mkdir labellabel
+
+cd ../val2017
+mkdir labellabel
+cd /home/ec2-user
+mkdir weights
