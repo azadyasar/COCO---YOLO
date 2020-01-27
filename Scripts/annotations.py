@@ -40,7 +40,8 @@ def convert_annotation(path,path2):
     width = item['width']
     height = item['height']
     value = filter(lambda item1: item1['image_id'] == image_id,data['annotations'])    
-    outfile = open(path2, '%s.txt'%(file_name[:-4]), 'a+')
+    outfile = open(path2 + '%s.txt'%(file_name[:-4]), 'a+')
+     outfile = open('/content/gdrive/My Drive/Small_COCO/train2014/labellabel/%s.txt'%(file_name[:-4]), 'a+')
     for item2 in value:
       category_id = item2['category_id']
       value1 = list(filter(lambda item3: item3['id'] == category_id,data['categories']))
