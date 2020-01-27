@@ -1,4 +1,4 @@
 classes=80
-train=/content/gdrive/My Drive/Small_COCO/train2014/coco_img.txt
-valid=/content/gdrive/My Drive/Small_COCO/val2017/coco_img.txt
-names=/content/gdrive/My Drive/Small_COCO/coco.names
+train=ec2-user/dataset/coco/train2014/coco_img.txt
+valid=ec2-user/dataset/coco/val2014/coco_img.txt
+names=ec2-user/coco.names

@@ -31,8 +31,8 @@ def convert(size,box):
   h = box[3]*dh
   return (x,y,w,h)
 
-def convert_annotation():
-  with open('/content/gdrive/My Drive/Small_COCO/annotations_trainval2014/annotations/instances_train2014.json','r') as f:
+def convert_annotation(path,path2):
+  with open(path,'r') as f:
     data = json.load(f)
   for item in data['images']:
     image_id = item['id']
@@ -40,7 +40,7 @@ def convert_annotation():
     width = item['width']
     height = item['height']
     value = filter(lambda item1: item1['image_id'] == image_id,data['annotations'])    
-    outfile = open('/content/gdrive/My Drive/Small_COCO/train2014/labellabel/%s.txt'%(file_name[:-4]), 'a+')
+    outfile = open(path2, '%s.txt'%(file_name[:-4]), 'a+')
     for item2 in value:
       category_id = item2['category_id']
       value1 = list(filter(lambda item3: item3['id'] == category_id,data['categories']))
@@ -52,4 +52,9 @@ def convert_annotation():
     outfile.close()
 			
 if __name__ == '__main__':
-    convert_annotation()
+    path = 'ec2-user/dataset/coco/annotations_trainval2017/annotations/instances_train2017.json'
+    path2 = 'ec2-user/dataset/coco/train2017/labellabel/'
+    convert_annotation(path,path2)
+    path = 'ec2-user/dataset/coco/annotations_trainval2017/annotations/instances_val2017.json'
+    path2 = 'ec2-user/dataset/coco/val2017/labellabel/'
+    convert_annotation(path,path2)
