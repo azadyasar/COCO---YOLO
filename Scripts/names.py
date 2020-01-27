@@ -17,7 +17,7 @@ classes = ["person","bicycle","car","motorcycle","airplane","bus","train",
 	   "laptop","mouse","remote","keyboard","cell phone","microwave","oven","toaster","sink",
 	   "refrigerator","book","clock","vase","scissors","teddy bear","hair drier","toothbrush"]
 
-outfile = open('ec2-user/coco.names', 'a+')
+outfile = open('/home/ec2-user/coco.names', 'a+')
 for cl in classes:
   outfile.write(cl + '\n')
 outfile.close()

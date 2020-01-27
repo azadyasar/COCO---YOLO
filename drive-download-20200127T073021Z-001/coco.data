@@ -1,4 +1,4 @@
 classes=80
-train=ec2-user/dataset/coco/train2014/coco_img.txt
-valid=ec2-user/dataset/coco/val2014/coco_img.txt
-names=ec2-user/coco.names
+train=/home/ec2-user/dataset/coco/train2017/coco_img.txt
+valid=/home/ec2-user/dataset/coco/val2017/coco_img.txt
+names=/home/ec2-user/coco.names
