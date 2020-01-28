@@ -1,4 +1,4 @@
 classes=80
-train=/home/ec2-user/dataset/coco/images/train2017/coco_img.txt
+train=/home/ec2-user/dataset/coco/images/train2014/coco_img.txt
 valid=/home/ec2-user/dataset/coco/images/val2017/coco_img.txt
 names=/home/ec2-user/coco.names
