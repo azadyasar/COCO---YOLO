@@ -56,9 +56,9 @@ def convert_annotation(path,path2):
     print("{} / {}".format(i,nfiles), end='\r')
 			
 if __name__ == '__main__':
-    path = '/home/ec2-user/dataset/coco/annotations/instances_train2017.json'
-    path2 = '/home/ec2-user/dataset/coco/images/train2017/labellabel/'
+    path = 'C:/Users/u21w97/Downloads/annotations_trainval2017/annotations/instances_train2017.json'
+    path2 = 'C:/Users/u21w97/Desktop/AWS/train2017/'
     convert_annotation(path,path2)
-    path = '/home/ec2-user/dataset/coco/annotations/instances_val2017.json'
-    path2 = '/home/ec2-user/dataset/coco/images/val2017/labellabel/'
+    path = 'C:/Users/u21w97/Downloads/annotations_trainval2017/annotations/instances_val2017.json'
+    path2 = 'C:/Users/u21w97/Desktop/AWS/val2017/'
     convert_annotation(path,path2)
