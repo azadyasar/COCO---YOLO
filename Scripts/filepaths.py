@@ -6,9 +6,9 @@ Created on Mon Jan 27 10:23:25 2020
 """
 
 import glob
-filepaths = glob.glob("/home/ec2-user/dataset/coco/images/train2017/*.jpg")
+filepaths = glob.glob("/home/ec2-user/dataset/coco/images/train2014/*.jpg")
 
-outfile = open('/home/ec2-user/dataset/coco/images/train2017/coco_img.txt', 'a+')
+outfile = open('/home/ec2-user/dataset/coco/images/train2014/coco_img.txt', 'a+')
 for filepath in filepaths:
   outfile.write(filepath + '\n')
 outfile.close()
