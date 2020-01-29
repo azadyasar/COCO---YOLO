@@ -328,7 +328,7 @@ class LoadImagesAndLabels(Dataset):  # for training/testing
             self.labels = [np.zeros((0, 5))] * n
             extract_bounding_boxes = False
             create_datasubset = False
-            print(self.label_files)
+            # print(self.label_files)
             pbar = tqdm(self.label_files, desc='Caching labels')
             nm, nf, ne, ns, nd = 0, 0, 0, 0, 0  # number missing, found, empty, datasubset, duplicate
             for i, file in enumerate(pbar):
