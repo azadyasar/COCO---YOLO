@@ -29,10 +29,30 @@ rm val2017.zip
 # rm image_info_test2017.zip
 
 
-cd images/train2014
-mkdir labellabel
+# cd train2014
+# mkdir labellabel
 
-cd ../val2017
-mkdir labellabel
+# cd ../val2017
+# mkdir labellabel
 cd /home/ec2-user
 mkdir weights
+
+git clone https://github.com/azadyasar/COCO---YOLO.git
+cd COCO---YOLO/drive-download-20200127T073021Z-001/
+mv coco.data yolo.cfg /home/ec2-user/
+
+cd ..
+mv labellabel-20200128T052301Z-001.zip /home/ec2-user/dataset/coco/images/train2014/
+cd /home/ec2-user/dataset/coco/images/train2014/
+unzip labellabel-20200128T052301Z-001.zip
+rm labellabel-20200128T052301Z-001.zip
+cd -
+
+mv labellabel-20200128T074745Z-001val.zip /home/ec2-user/dataset/coco/images/val2017/
+cd /home/ec2-user/dataset/coco/images/val2017/
+unzip labellabel-20200128T074745Z-001val.zip
+rm labellabel-20200128T074745Z-001val.zip
+cd -
+
+python /home/ec2-user/COCO---YOLO/Scripts/names.py
+python /home/ec2-user/COCO---YOLO/Scripts/filepaths.py
